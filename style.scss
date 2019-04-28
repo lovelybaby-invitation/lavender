@@ -6,17 +6,12 @@ body {
 }
 
 .main {
-  .img-wrapper {
-    width: 100%;
-    .img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
+  background: no-repeat url("assets/img/frame.png");
+  background-size: cover;
   .greeting {
     text-align: center;
     .greeting-header {
+      text-transform: uppercase;
       margin: 15px;
     }
     span {
@@ -53,6 +48,16 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+.photo {
+  .img-wrapper {
+    width: 100%;
+    .img {
+      width: 100%;
+      height: auto;
     }
   }
 }

@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   padding: 0;
@@ -19,12 +20,14 @@ body {
   justify-content: space-around;
   height: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: #fff;
+}
+
+.content {
+  padding: 10px 10px 0;
 }
 
 .main {
-  padding: 10px 10px 0;
-  height: calc(100% - 50px);
-  
   display: flex;
   flex-direction: column;
   .flower {
@@ -43,7 +46,7 @@ body {
       align-items: center;
       height: 100%;
       .name {
-        font-size: 12vw;
+        font-size: 13vw;
       }
       .em {
         font-size: 9vw;
@@ -55,10 +58,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Nanum Gothic', sans-serif;
-    .dates {
-      // justify-content: center;
-    }
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 5vw;
   }
 
   .divider {
@@ -68,17 +69,36 @@ body {
       width: 100%;
     }
   }
+}
 
-  .greeting {
-    font-family: "Nanum Myeongjo", sans-serif;
-    text-align: center;
-    .greeting-header {
-      text-transform: uppercase;
-      margin: 15px;
+.profile {
+  display: flex;
+  div {
+    flex: 1;
+    overflow: hidden;
+    .profile-pic-wrapper {
+      height: calc(50vw - 10px);
+      border: 1px solid black
     }
-    span {
-      display: block;
+    &.seunghyeon {
+      img {
+        transform: scale(1.7);
+        transform-origin: center;
+        width: 100%;
+        clip-path: circle(20% at 50% 40%);
+      }
     }
+    &.ara {
+      img {
+        transform: scale(4) translateY(1.45vw);
+        transform-origin: center;
+        width: 100%;
+        clip-path: circle(12%)
+      }
+    }
+    // img {
+    //   width: 100%;
+    // }
   }
 }
 

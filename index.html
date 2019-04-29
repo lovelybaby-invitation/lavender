@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>청첩장</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/font/flowerRoad.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>청첩장</title>
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo" rel="stylesheet">
-  <link rel="stylesheet" href="assets/font/flowerRoad.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <!-- 네비게이션 -->
+    <div class="nav">
+      <span><a href="#flower">🎉</a></span>
+      <span><a href="#profile">👨🏻‍💻❤️👩🏻‍💻</a></span>
+      <span><a href="#picture">📷</a></span>
+      <span><a href="#location">🚗</a></span>
+    </div>
 
-<body>
-  <div class="nav">
-    <span >🎉</span>
-    <span>👨🏻‍💻❤️👩🏻‍💻</span>
-    <span>📷</span>
-    <span>🚗</span>
-  </div>
+    <div class="content">
+      <!-- 메인 -->
+      <div class="main" id="flower">
+        <!-- 꽃, 이름 -->
+        <div class="flower">
+          <div class="names">
+            <span class="name">오승현</span>
+            <span class="em">&</span>
+            <span class="name">조아라</span>
+          </div>
+        </div>
 
-  <!-- 메인 -->
-  <div class="main">
+        <!-- 시간, 웨딩홀 -->
+        <div class="schedule">
+          <span class="date">2019년 06월 22일 오후 2시</span>
+          <span class="address">브라이드 밸리</span>
+        </div>
 
-    <div class="flower">
-      <div class="names">
-        <span class="name">오승현</span>
-        <span class="em">&</span>
-        <span class="name">조아라</span>
+        <div class="divider">
+          <img src="assets/img/divider.png" alt="" />
+        </div>
       </div>
 
-    </div>
-
-    <div class="schedule">
-      <span class="date">2019년 06월 22일 오후 2시</span>
-      <span class="address">브라이드 밸리</span>
-    </div>
-
-    <div class="background">
-
-      <div class="divider">
-        <img src="assets/img/divider.png" alt="">
+      <!-- 프로파일 -->
+      <div class="profile" id="profile">
+        <div class="seunghyeon">
+          <div class="profile-pic-wrapper">
+            <img src="assets/img/profile/seunghyeon.jpg" alt="" />
+          </div>
+        </div>
+        <div class="ara">
+          <div class="profile-pic-wrapper">
+            <img src="assets/img/profile/ara.jpg" alt="" />
+          </div>
+        </div>
       </div>
 
-      <!-- <div class="greeting">
-        <span>내가 세상의 꽃들과 들풀</span>
-        <span>숲의 색을 모두 훔쳐 올 테니</span>
-        <span>전부 그대의 것 하십시오</span>
-        <br>
-        <span>그러니</span>
-        <span>그대는 나의 여름이 되세요</span>
-        <br>
-        <span>&lt;도둑이 든 여름&gt; - 서덕준</span>
-      </div> -->
-
-    </div>
-  </div>
-
-
-  <!-- 사진첩 -->
-  <div class="photo">
-    <!-- <div class="img-wrapper">
+      <!-- 사진첩 -->
+      <div class="photo" id="photo">
+        <!-- <div class="img-wrapper">
       <img class="img" src="assets/img/004.jpg" alt="">
     </div> -->
-  </div>
+      </div>
 
-
-  <!-- 지도 -->
-  <div class="location">
-    <!-- 캘린더 추가 -->
-    <!-- 지도 -->
-    <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
-    <div class="location">
+      <!-- 지도 -->
+      <div class="location">
+        <!-- 캘린더 추가 -->
+        <!-- 지도 -->
+        <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
+        <div class="location"></div>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

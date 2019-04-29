@@ -13,7 +13,6 @@ body {
 .nav {
   position: sticky;
   top: 0px;
-  // background: #eee;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -28,14 +27,11 @@ body {
   
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   .flower {
     height: calc(107vw - 20px);
-    // height: 107.2058vw;
     background: no-repeat url("assets/img/frame.png");
     background-size: contain;
     background-origin: border-box;
-    // margin: 0 10px;
     padding: 24.13vw 0;
     box-sizing: border-box;
     position: relative;
@@ -74,7 +70,7 @@ body {
   }
 
   .greeting {
-    font-family: "Nanum Myeongjo";
+    font-family: "Nanum Myeongjo", sans-serif;
     text-align: center;
     .greeting-header {
       text-transform: uppercase;

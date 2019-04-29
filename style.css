@@ -38,9 +38,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .main .flower {
@@ -104,7 +101,7 @@ body {
 }
 
 .main .greeting {
-  font-family: "Nanum Myeongjo";
+  font-family: "Nanum Myeongjo", sans-serif;
   text-align: center;
 }
 

@@ -1,14 +1,68 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: "NanumSquare", sans-serif;
+  max-width: 375px;
+}
+
+.nav {
+  position: sticky;
+  top: 0px;
+  // background: #eee;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
 
 .main {
-  background: no-repeat url("assets/img/frame.png");
-  background-size: cover;
+  .info {
+    height: 381px;
+    background: no-repeat url("assets/img/frame.png");
+    background-size: contain;
+    background-origin: border-box;
+    margin: 0 10px;
+    padding: 90.5px 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: FlowerRoad;
+    .names {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .name {
+        font-size: 50px;
+      }
+      .em {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    .dates {
+      // justify-content: center;
+    }
+  }
+
+  .divider {
+    width: 50%;
+    margin: 20px auto;
+    img {
+      width: 100%;
+    }
+  }
+
   .greeting {
+    font-family: "Nanum Myeongjo";
     text-align: center;
     .greeting-header {
       text-transform: uppercase;
@@ -16,38 +70,6 @@ body {
     }
     span {
       display: block;
-    }
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 250px;
-
-    .dates {
-      display: flex;
-      justify-content: center;
-    }
-
-    .emoji {
-      display: flex;
-      justify-content: center;
-    }
-
-    .names {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      .name {
-        font-size: 20px;
-      }
-    }
-
-    .location {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
   }
 }
@@ -60,4 +82,10 @@ body {
       height: auto;
     }
   }
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

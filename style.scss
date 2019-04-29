@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   padding: 0;
   margin: 0 auto;
   font-family: "NanumSquare", sans-serif;
-  max-width: 375px;
+  // max-width: 375px;
+  height: 100%;
 }
 
 .nav {
@@ -19,13 +23,20 @@ body {
 }
 
 .main {
-  .info {
-    height: 381px;
+  padding: 10px 10px 0;
+  height: calc(100% - 50px);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .flower {
+    height: calc(107vw - 20px);
+    // height: 107.2058vw;
     background: no-repeat url("assets/img/frame.png");
     background-size: contain;
     background-origin: border-box;
-    margin: 0 10px;
-    padding: 90.5px 0;
+    // margin: 0 10px;
+    padding: 24.13vw 0;
     box-sizing: border-box;
     position: relative;
     font-family: FlowerRoad;
@@ -34,11 +45,12 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100%;
       .name {
-        font-size: 50px;
+        font-size: 12vw;
       }
       .em {
-        font-size: 30px;
+        font-size: 9vw;
       }
     }
   }

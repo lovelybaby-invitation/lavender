@@ -1,4 +1,9 @@
-@font-face { font-family: '777Balsamtint'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face {
+  font-family: '777Balsamtint';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -193,13 +198,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   font-size: 5vw;
   font-family: '777Balsamtint';
 }
 
 .tel {
-  width : 20px;
+  width: 20px;
 }
 
 .photo .img-wrapper {
@@ -207,6 +212,11 @@ body {
 }
 
 .photo .img-wrapper .img {
+  width: 100%;
+  height: auto;
+}
+
+.calendar {
   width: 100%;
   height: auto;
 }
@@ -222,10 +232,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.calendar {
-  width: 100%;
-  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,12 +8,6 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: "NanumSquare", sans-serif;
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .nav {
@@ -34,8 +28,35 @@ a {
   background-color: #fff;
 }
 
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav .emoji {
+  display: none;
+}
+
+.nav .on .char {
+  display: none;
+}
+
+.nav .on .emoji {
+  display: block;
+}
+
 .content {
   padding: 10px 10px 0;
+}
+
+.content .pane {
+  position: relative;
+}
+
+.content .pane .anchor {
+  position: absolute;
+  margin-top: -60px;
+  padding-top: 60px;
 }
 
 .main {
@@ -160,8 +181,8 @@ a {
           transform: scale(4) translateY(1.45vw);
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-clip-path: circle(13%);
-          clip-path: circle(13%);
+  -webkit-clip-path: circle(12%);
+          clip-path: circle(12%);
 }
 
 .photo .img-wrapper {

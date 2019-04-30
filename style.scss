@@ -8,7 +8,7 @@ body {
   margin: 0 auto;
   font-family: "NanumSquare", sans-serif;
   // max-width: 375px;
-  height: 100%;
+  // height: 100%;
 }
 
 .nav {
@@ -21,10 +21,34 @@ body {
   height: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   background-color: #fff;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .emoji {
+    display: none;
+  }
+  .on {
+    .char {
+      display: none;
+    }
+    .emoji {
+      display: block;
+    }
+  }
 }
 
 .content {
   padding: 10px 10px 0;
+  .pane {
+    position: relative;
+    .anchor {
+      position: absolute;
+      margin-top: -60px;
+      padding-top: 60px;
+      // top: -60px;
+    }
+  }
 }
 
 .main {

@@ -1,140 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>청첩장</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/font/flowerRoad.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script>
-      window.onload = function() {
-        var flower = document.getElementById('flower');
-        var profile = document.getElementById('profile');
-        var photo = document.getElementById('photo');
-        var location = document.getElementById('location');
 
-        window.addEventListener('scroll', function() {
-          
-          var y = window.scrollY;
-          var innerH = window.innerHeight;
-          var clientHeight = document.body.clientHeight;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>청첩장</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/font/flowerRoad.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          var position = getCurrentScrollPosition(y, innerH, clientHeight);
-          
-          if (flower.getBoundingClientRect().top > 0) {
-            turnOnEmoji('main');
-            turnOffEmoji('profile');
-            turnOffEmoji('photo');
-            turnOffEmoji('location');
-          } else if (profile.getBoundingClientRect().top > 0) {
-            turnOnEmoji('profile');
-            turnOffEmoji('main');
-            turnOffEmoji('photo');
-            turnOffEmoji('location');
-          }  else if (photo.getBoundingClientRect().top > 0) {
-            turnOnEmoji('photo');
-            turnOffEmoji('profile');
-            turnOffEmoji('main');
-            turnOffEmoji('location');
-          }  else if (location.getBoundingClientRect().top > 0) {
-            turnOnEmoji('location');
-            turnOffEmoji('profile');
-            turnOffEmoji('photo');
-            turnOffEmoji('main');
-          }
+<body>
+  <!-- 네비게이션 -->
+  <div class="nav">
+    <div class="nav-menu" id="nav-main">
+      <a href="#main">
+        <span class="char">Main</span>
+        <span class="emoji">🎉</span>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-profile">
+      <a href="#profile">
+        <span class="char">Profile</span>
+        <span class="emoji">👨🏻‍💻❤️👩🏻‍💻</span>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-photo">
+      <a href="#photo">
+        <span class="char">Photo</span>
+        <span class="emoji">📷</span>
+      </a>
+    </div>
+    <div class="nav-menu" id="nav-location">
+      <a href="#location">
+        <span class="char">Location</span>
+        <span class="emoji">🚗</span>
+      </a>
+    </div>
+  </div>
 
-        });
+  <div class="content">
+    <!-- 메인 -->
+    <div class="pane main">
+      <span class="anchor" id="main"></span>
+      <!-- 꽃, 이름 -->
+      <div class="flower">
+        <div class="names">
+          <span class="name">오승현</span>
+          <span class="em">&</span>
+          <span class="name">조아라</span>
+        </div>
+      </div>
 
-        function getCurrentScrollPosition(y, h, ch) {
-          return (y+h) / ch;
-        }
+      <!-- 시간, 웨딩홀 -->
+      <div class="schedule">
+        <span class="date">2019년 06월 22일 오후 2시</span>
+        <span class="address">브라이드 밸리</span>
+      </div>
 
-        function turnOnEmoji(id) {
-          document.getElementById(id).style.display = 'none';
-          document.getElementById(id+'E').style.display = 'block';
-        }
-        function turnOffEmoji(id) {
-          document.getElementById(id).style.display = 'block';
-          document.getElementById(id+'E').style.display = 'none';
-        }
-
-      }
-    </script>
-  </head>
-
-  <body>
-    <!-- 네비게이션 -->
-    <div class="nav">
-      <span id="main"><a href="#flower">Main</a></span>
-      <span id="mainE" style="display: none;"><a href="#flower">🎉</a></span>
-      <span id="profile"><a href="#profile">Profile</a></span>
-      <span id="profileE" style="display: none;"><a href="#profile">👨🏻‍💻❤️👩🏻‍💻</a></span>
-      <span id="photo"><a href="#picture">Photo</a></span>
-      <span id="photoE" style="display: none;"><a href="#picture">📷</a></span>
-      <span id="location"><a href="#location">Location</a></span>
-      <span id="locationE" style="display: none;"><a href="#location">🚗</a></span>
+      <div class="divider">
+        <img src="assets/img/divider.png" alt="" />
+      </div>
     </div>
 
-    <div class="content">
-      <!-- 메인 -->
-      <div class="main" id="flower">
-        <!-- 꽃, 이름 -->
-        <div class="flower">
-          <div class="names">
-            <span class="name">오승현</span>
-            <span class="em">&</span>
-            <span class="name">조아라</span>
-          </div>
-        </div>
+    <!-- 프로파일 -->
+    <div class="pane profile">
+      <span class="anchor" id="profile"></span>
 
-        <!-- 시간, 웨딩홀 -->
-        <div class="schedule">
-          <span class="date">2019년 06월 22일 오후 2시</span>
-          <span class="address">브라이드 밸리</span>
-        </div>
-
-        <div class="divider">
-          <img src="assets/img/divider.png" alt="" />
-        </div>
+      <div class="seunghyeon">
+        <img src="assets/img/profile/seunghyeon.jpg" alt="" />
       </div>
-
-      <!-- 프로파일 -->
-      <div class="profile" id="profile">
-        <div class="seunghyeon">
-            <img src="assets/img/profile/seunghyeon.jpg" alt="" />
-        </div>
-        <div class="ring">
-          <img src="assets/img/rings.png" alt="">
-        </div>
-        <div class="ara">
-            <img src="assets/img/profile/ara.jpg" alt="" />
-        </div>
+      <div class="ring">
+        <img src="assets/img/rings.png" alt="">
       </div>
-
-      <!-- 사진첩 -->
-      <div class="photo" id="photo">
-        <div class="img-wrapper">
-          <img class="img" src="assets/img/004.jpg" alt="">
-        </div>
+      <div class="ara">
+        <img src="assets/img/profile/ara.jpg" alt="" />
       </div>
+    </div>
 
+    <!-- 사진첩 -->
+    <div class="pane photo">
+      <span class="anchor" id="photo"></span>
+      <div class="img-wrapper">
+        <img class="img" src="assets/img/004.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- 지도 -->
+    <div class="pane location">
+      <span class="anchor" id="location"></span>
+      <!-- 캘린더 추가 -->
       <!-- 지도 -->
-      <div class="location">
-        <!-- 캘린더 추가 -->
-        <!-- 지도 -->
-        <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
-        <div class="location"></div>
-      </div>
+      <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
+      <div class="location"></div>
     </div>
-  </body>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

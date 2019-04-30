@@ -58,7 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 5vw;
   }
 
@@ -74,28 +74,33 @@ body {
 .profile {
   display: flex;
   div {
-    flex: 1;
+    flex: 3;
     overflow: hidden;
-    .profile-pic-wrapper {
-      height: calc(50vw - 10px);
-      border: 1px solid black
+    height: calc(43vw - 6.6px);
+    // border: 1px solid black;
+    img {
+      width: 100%;
     }
-    &.seunghyeon {
+    &.ring {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
-        transform: scale(1.7);
-        transform-origin: center;
         width: 100%;
-        clip-path: circle(20% at 50% 40%);
       }
     }
-    &.ara {
-      img {
-        transform: scale(4) translateY(1.45vw);
-        transform-origin: center;
-        width: 100%;
-        clip-path: circle(12%)
-      }
+    &.seunghyeon img {
+      transform: scale(1.7);
+      transform-origin: center;
+      clip-path: circle(20% at 50% 40%);
     }
+    &.ara img {
+      transform: scale(4) translateY(1.45vw);
+      transform-origin: center;
+      clip-path: circle(12%);
+    }
+
     // img {
     //   width: 100%;
     // }

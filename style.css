@@ -91,7 +91,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 5vw;
 }
 
@@ -111,15 +111,34 @@ body {
 }
 
 .profile div {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  overflow: hidden;
+  height: calc(43vw - 6.6px);
+}
+
+.profile div img {
+  width: 100%;
+}
+
+.profile div.ring {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.profile div .profile-pic-wrapper {
-  height: calc(50vw - 10px);
-  border: 1px solid black;
+.profile div.ring img {
+  width: 100%;
 }
 
 .profile div.seunghyeon img {
@@ -127,7 +146,6 @@ body {
           transform: scale(1.7);
   -webkit-transform-origin: center;
           transform-origin: center;
-  width: 100%;
   -webkit-clip-path: circle(20% at 50% 40%);
           clip-path: circle(20% at 50% 40%);
 }
@@ -137,7 +155,6 @@ body {
           transform: scale(4) translateY(1.45vw);
   -webkit-transform-origin: center;
           transform-origin: center;
-  width: 100%;
   -webkit-clip-path: circle(12%);
           clip-path: circle(12%);
 }

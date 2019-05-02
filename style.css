@@ -205,15 +205,11 @@ body {
 
 .tel {
   width: 20px;
+  height: auto;
 }
 
 .photo .img-wrapper {
   width: 100%;
-}
-
-.photo .img-wrapper .img {
-  width: 100%;
-  height: auto;
 }
 
 .calendar {
@@ -232,5 +228,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 3vw;
+}
+
+.location .icon {
+  width: 20px;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

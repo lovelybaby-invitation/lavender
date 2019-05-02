@@ -14,10 +14,15 @@
   <link rel="manifest" href="assets/favicon/site.webmanifest">
 
   <title>애웅과 먼머의 청첩장</title>
+
+  <!--fonts-->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet" />
   <link rel="stylesheet" href="assets/font/flowerRoad.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css" />
+  
+  <!--css-->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -97,11 +102,11 @@
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
         <div class="contact">
-            <span>찬석에게 연락하기</span>
+            <span>부 : 오찬석</span>
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
         <div class="contact">
-            <span>영숙에게 연락하기</span>
+            <span>모 : 김영숙</span>
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
       </div>
@@ -112,11 +117,11 @@
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
         <div class="contact">
-            <span>건호에게 연락하기</span>
+            <span>부 : 조건호</span>
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
         <div class="contact">
-            <span>기옥에게 연락하기</span>
+            <span>모 : 권기옥</span>
             <img class="tel" src="assets/img/feedback.png" alt=""/>
         </div>
       </div>
@@ -126,21 +131,46 @@
     <div class="pane photo">
       <span class="anchor" id="photo"></span>
       <div class="img-wrapper">
-        <img class="img" src="assets/img/004.jpg" alt="">
+
+        <!--slide images-->
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/001.jpg" alt="">
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/002.jpg" alt="">
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/003.jpg" alt="">
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/004.jpg" alt="">
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/005.jpg" alt="">
+        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/006.jpg" alt="">
+
+        <!--slide button-->
+        <div class="w3-center">
+            <div class="w3-section">
+              <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+              <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+            </div>
+            <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+            <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+            <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+            <button class="w3-button demo" onclick="currentDiv(4)">4</button> 
+            <button class="w3-button demo" onclick="currentDiv(5)">5</button> 
+        </div>
       </div>
     </div>
 
     <!-- 지도 -->
     <div class="pane location">
       <span class="anchor" id="location"></span>
-      <!-- 캘린더 추가 -->
-      <img class="calendar" src="assets/img/calendar.jpg" alt=""/>
       <!-- 지도 -->
+      <div id="map"></div>
       <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
-      <div class="location"></div>
+      <div class="location">
+          <img class="icon" src="assets/img/copy.png" alt=""/><span class="copy">주소복사</span>
+          <img class="icon" src="assets/img/bus.png" alt=""/><span class="byBus">버스정보</span>
+          <img class="icon" src="assets/img/subway.png" alt=""/><span class="bySubway">지하철 3호선 양재역 3번출구</span>
+      </div>
     </div>
   </div>
 
+  <!--script-->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41edd6c6cb3fd24f57ad354551d1064d"></script>
   <script src="script.js"></script>
 </body>
 

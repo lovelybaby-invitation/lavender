@@ -132,47 +132,36 @@
       <span class="anchor" id="photo"></span>
       <div class="img-wrapper">
 
-        <!--slide images-->
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/001.jpg" alt="">
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/002.jpg" alt="">
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/003.jpg" alt="">
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/004.jpg" alt="">
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/005.jpg" alt="">
-        <img class="mySlides" style="width:100%;height:auto;" src="assets/img/006.jpg" alt="">
-
-        <!--slide button-->
+        <!--thumbnail list-->
         <div class="w3-row-padding w3-section">
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/001.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+            <img id="myImg1" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/001.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg1')">
           </div>
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/002.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+            <img id="myImg2" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/002.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg2')">
           </div>
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/003.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+            <img id="myImg3" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/003.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg3')">
           </div>
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/004.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+            <img id="myImg4" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/004.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg4')">
           </div>
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/005.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+            <img id="myImg5" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/005.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg5')">
           </div>
           <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="assets/img/006.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
+            <img id="myImg6" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/006.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg6')">
           </div>
         </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+        </div>
         
-        <!--<div class="w3-center">
-            <div class="w3-section">
-              <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
-              <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
-            </div>
-            <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
-            <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
-            <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
-            <button class="w3-button demo" onclick="currentDiv(4)">4</button> 
-            <button class="w3-button demo" onclick="currentDiv(5)">5</button> 
-        </div>-->
       </div>
     </div>
 

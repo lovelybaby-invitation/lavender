@@ -81,41 +81,21 @@ function turnOnEmoji(id) {
   }
 }
 
-//image slider
-let slideIndex = 1;
-showDivs(slideIndex);
+// Get the modal
+const modal = document.getElementById('myModal');
+const modalImg = document.getElementById("img01");
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+function imgPopUp(id) {
+  let img = document.getElementById(id);
+  modal.style.display = "flex";
+  modalImg.src = img.src;
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
 
-function showDivs(n) {
-  let i;
-  const x = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
 }
-
-/*function showDivs(n) {
-  let i;
-  const x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}*/

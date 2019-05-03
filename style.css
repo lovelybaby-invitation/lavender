@@ -208,6 +208,10 @@ body {
   height: auto;
 }
 
+.photo {
+  margin-top: 30px;
+}
+
 .photo .img-wrapper {
   width: 100%;
 }

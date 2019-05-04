@@ -1,187 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!--meta-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <!--meta-->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-  <!--favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>애웅과 먼머의 청첩장</title>
 
-  <title>애웅과 먼머의 청첩장</title>
+    <!--fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/font/flowerRoad.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
 
-  <!--fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/font/flowerRoad.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css" />
-  
-  <!--css-->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
+    <!--css-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
 
-<body>
-  <!-- 네비게이션 -->
-  <div class="nav">
-    <div class="nav-menu" id="nav-main">
-      <a href="#main">
-        <span class="char">#Main</span>
-        <span class="emoji">🎉</span>
-      </a>
-    </div>
-    <div class="nav-menu" id="nav-profile">
-      <a href="#profile">
-        <span class="char">#Profile</span>
-        <span class="emoji">👨🏻‍💻❤️👩🏻‍💻</span>
-      </a>
-    </div>
-    <div class="nav-menu" id="nav-photo">
-      <a href="#photo">
-        <span class="char">#Photo</span>
-        <span class="emoji">📷</span>
-      </a>
-    </div>
-    <div class="nav-menu" id="nav-location">
-      <a href="#location">
-        <span class="char">#Location</span>
-        <span class="emoji">🚗</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="content">
-    <!-- 메인 -->
-    <div class="pane main">
-      <span class="anchor" id="main"></span>
-      <!-- 꽃, 이름 -->
-      <div class="flower">
-        <div class="names">
-          <span class="name">오승현</span>
-          <span class="em">&</span>
-          <span class="name">조아라</span>
-        </div>
+  <body>
+    <!-- 네비게이션 -->
+    <div class="nav">
+      <div class="nav-menu" id="nav-main">
+        <a href="#main">
+          <span class="char">#Main</span>
+          <span class="emoji">🎉</span>
+        </a>
       </div>
-
-      <!-- 시간, 웨딩홀 -->
-      <div class="schedule">
-        <span class="date">2019년 06월 22일 오후 2시</span>
-        <span class="address">브라이드밸리</span>
+      <div class="nav-menu" id="nav-profile">
+        <a href="#profile">
+          <span class="char">#Profile</span>
+          <span class="emoji">👨🏻‍💻❤️👩🏻‍💻</span>
+        </a>
       </div>
-
-      <div class="divider">
-        <img src="assets/img/divider.png" alt="" />
+      <div class="nav-menu" id="nav-photo">
+        <a href="#photo">
+          <span class="char">#Photo</span>
+          <span class="emoji">📷</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-location">
+        <a href="#location">
+          <span class="char">#Location</span>
+          <span class="emoji">🚗</span>
+        </a>
       </div>
     </div>
 
-    <!-- 프로파일 -->
-    <div class="pane profile">
-      <span class="anchor" id="profile"></span>
-
-      <div class="seunghyeon">
-        <img src="assets/img/profile/seunghyeon.jpg" alt="" />
-      </div>
-      <div class="ring">
-        <img src="assets/img/wedding-ring.png" alt=""/>
-      </div>
-      <div class="ara">
-        <img src="assets/img/profile/ara.jpg" alt=""/>
-      </div>
-
-    </div>
-    
-    <!-- 연락처 -->
-    <div class="contacts">
-      <div>
-        <div class="contact">
-            <span>신랑에게 연락하기</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-        <div class="contact">
-            <span>부 : 오찬석</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-        <div class="contact">
-            <span>모 : 김영숙</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-      </div>
-
-      <div>
-        <div class="contact">
-            <span>신부에게 연락하기</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-        <div class="contact">
-            <span>부 : 조건호</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-        <div class="contact">
-            <span>모 : 권기옥</span>
-            <img class="tel" src="assets/img/feedback.png" alt=""/>
-        </div>
-      </div>
-    </div>
-
-    <!-- 사진첩 -->
-    <div class="pane photo">
-      <span class="anchor" id="photo"></span>
-      <div class="img-wrapper">
-
-        <!--thumbnail list-->
-        <div class="w3-row-padding w3-section">
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg1" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/001.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg1')">
-          </div>
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg2" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/002.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg2')">
-          </div>
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg3" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/003.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg3')">
-          </div>
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg4" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/004.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg4')">
-          </div>
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg5" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/005.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg5')">
-          </div>
-          <div class="w3-col s4" style="height:64px;overflow:hidden;">
-            <img id="myImg6" class="demo w3-opacity w3-hover-opacity-off" src="assets/img/006.jpg" style="width:100%;cursor:pointer" onclick="imgPopUp('myImg6')">
+    <div class="content">
+      <!-- 메인 -->
+      <div class="pane main">
+        <span class="anchor" id="main"></span>
+        <!-- 꽃, 이름 -->
+        <div class="flower">
+          <div class="names">
+            <span class="name">오승현</span>
+            <span class="em">&</span>
+            <span class="name">조아라</span>
           </div>
         </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-          <!-- The Close Button -->
-          <span class="close">&times;</span>
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
+        <!-- 시간, 웨딩홀 -->
+        <div class="schedule">
+          <span class="date">2019년 06월 22일 오후 2시</span>
+          <span class="address">브라이드밸리</span>
         </div>
-        
-      </div>
-    </div>
 
-    <!-- 지도 -->
-    <div class="pane location">
-      <span class="anchor" id="location"></span>
+        <div class="divider">
+          <img src="assets/img/divider.png" alt="" />
+        </div>
+      </div>
+
+      <!-- 프로파일 -->
+      <div class="pane profile">
+        <span class="anchor" id="profile"></span>
+
+        <div class="pictures">
+          <div class="seunghyeon">
+            <img src="assets/img/profile/seunghyeon.jpg" alt="" />
+          </div>
+          <div class="ring">
+            <img src="assets/img/wedding-ring.png" alt="" />
+          </div>
+          <div class="ara">
+            <img src="assets/img/profile/ara.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- 연락처 -->
+        <div class="contacts">
+          <div>
+            <div class="contact">
+              <span>신랑에게 연락하기</span>
+              <a class="tel" href="tel:01065563747"></a>
+            </div>
+            <div class="contact">
+              <span>부 : 오찬석</span>
+              <a class="tel" href="tel:01066833408"></a>
+            </div>
+            <div class="contact">
+              <span>모 : 김영숙</span>
+              <a class="tel" href="tel:01075543408"></a>
+            </div>
+          </div>
+          <div>
+            <div class="contact">
+              <span>신부에게 연락하기</span>
+              <a class="tel" href="tel:"></a>
+            </div>
+            <div class="contact">
+              <span>부 : 조건호</span>
+              <a class="tel" href="tel:"></a>
+            </div>
+            <div class="contact">
+              <span>모 : 권기옥</span>
+              <a class="tel" href="tel:"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 사진첩 -->
+      <div class="pane photo">
+        <span class="anchor" id="photo"></span>
+        <div class="img-wrapper">
+          <!--thumbnail list-->
+          <div class="w3-row-padding w3-section">
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg1"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/001.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg1')"
+              />
+            </div>
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg2"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/002.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg2')"
+              />
+            </div>
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg3"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/003.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg3')"
+              />
+            </div>
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg4"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/004.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg4')"
+              />
+            </div>
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg5"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/005.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg5')"
+              />
+            </div>
+            <div class="w3-col s4" style="height:64px;overflow:hidden;">
+              <img
+                id="myImg6"
+                class="demo w3-opacity w3-hover-opacity-off"
+                src="assets/img/006.jpg"
+                style="width:100%;cursor:pointer"
+                onclick="imgPopUp('myImg6')"
+              />
+            </div>
+          </div>
+
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01" />
+          </div>
+        </div>
+      </div>
+
       <!-- 지도 -->
-      <div id="map"></div>
-      <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
-      <div class="location">
-          <img class="icon" src="assets/img/copy.png" alt=""/><span class="copy">주소복사</span>
-          <img class="icon" src="assets/img/bus.png" alt=""/><span class="byBus">버스정보</span>
-          <img class="icon" src="assets/img/subway.png" alt=""/><span class="bySubway">지하철 3호선 양재역 3번출구</span>
+      <div class="pane location">
+        <span class="anchor" id="location"></span>
+        <!-- 지도 -->
+        <div id="map"></div>
+        <!-- 서울 강남구 강남대로 262 캠코양재타워 지하1층 -->
+        <div class="location">
+          <img class="icon" src="assets/img/copy.png" alt="" /><span
+            class="copy"
+            >주소복사</span
+          >
+          <img class="icon" src="assets/img/bus.png" alt="" /><span
+            class="byBus"
+            >버스정보</span
+          >
+          <img class="icon" src="assets/img/subway.png" alt="" /><span
+            class="bySubway"
+            >지하철 3호선 양재역 3번출구</span
+          >
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--script-->
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41edd6c6cb3fd24f57ad354551d1064d"></script>
-  <script src="script.js"></script>
-</body>
-
+    <!--script-->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41edd6c6cb3fd24f57ad354551d1064d"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -26,7 +26,8 @@
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-    <title>애웅과 먼머의 청첩장</title>
+    <!-- <title>애웅과 먼머의 청첩장</title> -->
+    <title>청첩장</title>
 
     <!--fonts-->
     <link
@@ -42,7 +43,6 @@
 
     <!--css-->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
 
   <body>
@@ -98,10 +98,11 @@
         </div>
       </div>
 
-      <!-- 프로파일 -->
+      <!-- 프로필 -->
       <div class="pane profile">
         <span class="anchor" id="profile"></span>
 
+        <!-- 프로필 사진 -->
         <div class="pictures">
           <div class="seunghyeon">
             <img src="assets/img/profile/seunghyeon.jpg" alt="" />
@@ -151,68 +152,12 @@
       <div class="pane photo">
         <span class="anchor" id="photo"></span>
 
-        <div class="img-wrapper">
-          <div class="w3-row-padding w3-section">
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg1"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/001.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg1')"
-              />
-            </div>
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg2"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/002.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg2')"
-              />
-            </div>
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg3"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/003.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg3')"
-              />
-            </div>
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg4"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/004.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg4')"
-              />
-            </div>
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg5"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/005.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg5')"
-              />
-            </div>
-            <div class="w3-col s4" style="height:64px;overflow:hidden;">
-              <img
-                id="myImg6"
-                class="demo w3-opacity w3-hover-opacity-off"
-                src="assets/img/006.jpg"
-                style="width:100%;cursor:pointer"
-                onclick="imgPopUp('myImg6')"
-              />
-            </div>
-          </div>
-
-          <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01" />
-          </div>
+        <!-- 갤러리 -->
+        <div class="images"></div>
+        <!-- 모달 -->
+        <div id="image-modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01" />
         </div>
       </div>
 
@@ -220,22 +165,28 @@
       <div class="pane location">
         <span class="anchor" id="location"></span>
 
-      <div id="map"></div>
+        <div id="map"></div>
 
-      <div class="location">
-        <div><span class="copy">주소복사</span><img lass="icon" id="copy" src="assets/img/copy.png" alt=""/></div>
-        <div><span class="byBus">뱅뱅사거리(중앙버스), 구영동중학교 정류장</span><img class="icon" src="assets/img/bus.png" alt=""/></div>
-        <div><span class="bySubway">지하철 3호선 양재역 3번출구 도보 2분</span><img class="icon" src="assets/img/subway.png" alt=""/></div>
-      </div>
-
-      <div class="location">
         <div>
-         <span class="byBus">전세버스안내</span><img class="icon" src="assets/img/bus.png" alt=""/>
+          <span class="copy">주소복사</span>
+          <img lass="icon" id="copy" src="assets/img/copy.png" alt="" />
         </div>
-        예식당일 오전 8시 서구 해돋이로 22번길 3-4 은성교회 앞 출발
+        <div>
+          <span class="byBus">뱅뱅사거리(중앙버스), 구영동중학교 정류장</span>
+          <img class="icon" src="assets/img/bus.png" alt="" />
+        </div>
+        <div>
+          <span class="bySubway">지하철 3호선 양재역 3번출구 도보 2분</span>
+          <img class="icon" src="assets/img/subway.png" alt="" />
+        </div>
+        <div>
+          <span class="byBus">전세버스안내</span>
+          <span
+            >예식당일 오전 8시 서구 해돋이로 22번길 3-4 은성교회 앞 출발</span
+          >
+        </div>
       </div>
     </div>
-
     <!--script-->
     <script
       type="text/javascript"

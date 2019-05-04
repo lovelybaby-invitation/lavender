@@ -1,35 +1,46 @@
-window.onload = function() {
-  //상단 메뉴 이모지 컨트롤
-  const main = document.getElementById("main");
-  const profile = document.getElementById("profile");
-  const photo = document.getElementById("photo");
-  const location = document.getElementById("location");
+window.onload = function () {
+  // pane
+  const pane = {
+    main: document.getElementById("main"),
+    profile: document.getElementById("profile"),
+    photo: document.getElementById("photo"),
+    location: document.getElementById("location")
+  }
 
+  const progressBarEl = document.querySelector('.progress');
+
+  // nav에 클릭 이벤트 걸기
+  const navMenuEl = document.querySelectorAll('.nav-menu');
+  for (let i = 0; i < navMenuEl.length; i++) {
+    const menuEl = navMenuEl[i];
+    menuEl.onclick = () => {
+      pane[menuEl.id.slice(4)].scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // 상단 메뉴 이모지 컨트롤
   getTopFromEachElement();
-
   window.addEventListener("scroll", getTopFromEachElement);
   function getTopFromEachElement() {
-    const mainTop = Math.abs(main.getBoundingClientRect().top);
-    const profileTop = Math.abs(profile.getBoundingClientRect().top);
-    const photoTop = Math.abs(photo.getBoundingClientRect().top);
-    const locationTop = Math.abs(location.getBoundingClientRect().top);
+    const mainTop = Math.abs(pane.main.getBoundingClientRect().top);
+    const profileTop = Math.abs(pane.profile.getBoundingClientRect().top);
+    const photoTop = Math.abs(pane.photo.getBoundingClientRect().top);
+    const locationTop = Math.abs(pane.location.getBoundingClientRect().top);
 
     const minimum = Math.min(mainTop, profileTop, photoTop, locationTop);
 
     switch (minimum) {
-      case mainTop:
-        turnOnEmoji("main");
-        break;
-      case profileTop:
-        turnOnEmoji("profile");
-        break;
-      case photoTop:
-        turnOnEmoji("photo");
-        break;
-      case locationTop:
-        turnOnEmoji("location");
-        break;
+      case mainTop: turnOnEmoji("main"); break;
+      case profileTop: turnOnEmoji("profile"); break;
+      case photoTop: turnOnEmoji("photo"); break;
+      case locationTop: turnOnEmoji("location"); break;
     }
+
+    const scrollHeight = document.documentElement.scrollHeight;
+    const windowHeight = document.documentElement.clientHeight;
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    // alert(document.body.scrollTop);
+    progressBarEl.style.width = `${scrollTop / (scrollHeight - windowHeight) * 100}%`;
   }
 
   function turnOnEmoji(id) {
@@ -45,7 +56,7 @@ window.onload = function() {
   }
 
   /**
-   * 이미지 추가
+   * 이미지
    */
   const images = [
     "001.jpg",
@@ -55,6 +66,8 @@ window.onload = function() {
     "005.jpg",
     "006.jpg"
   ];
+
+  // 이미지 추가
   const imagesEl = document.querySelector(".images");
   images.forEach(imageFileName => {
     const imageWrapperEl = document.createElement("div");
@@ -80,9 +93,33 @@ window.onload = function() {
   const span = document.getElementsByClassName("close")[0];
 
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  span.onclick = function () {
     modal.style.display = "none";
   };
+
+  // 이미지 스와이프
+  const hammer = new Hammer(imagesEl);
+  hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL })
+  hammer.on('swipeleft swiperight', (ev) => {
+    let direction = 1;
+    switch (ev.type) {
+      case 'swiperight': direction = -1; break;
+    }
+    slide(direction);
+  });
+
+  // 화살표 이벤트
+  document.querySelector('.arrow.left').addEventListener('click', () => slide(-1));
+  document.querySelector('.arrow.right').addEventListener('click', () => slide(1));
+
+  function slide(direction) {
+    imagesEl.scrollBy({ left: window.innerWidth * direction, behavior: 'smooth' });
+  }
+
+
+
+
+
 
   //다음 지도 api
   const container = document.getElementById("map");
@@ -99,10 +136,10 @@ window.onload = function() {
 
   // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
   const markerImage = new daum.maps.MarkerImage(
-      imageSrc,
-      imageSize,
-      imageOption
-    ),
+    imageSrc,
+    imageSize,
+    imageOption
+  ),
     markerPosition = new daum.maps.LatLng(
       37.48696198627081,
       127.03344609502346
@@ -132,14 +169,3 @@ window.onload = function() {
   map.setDraggable(false);
 };
 
-const copyimg = document.getElementById("copy");
-copyimg.onclick = function() {
-  const address = "서울 강남구 강남대로 262 캠코양재타워 B1층";
-  const el = document.createElement("textarea");
-  el.value = address;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand("copy");
-  document.body.removeChild(el);
-  alert("복사 완료! 조금 이따 봐요! :D ");
-};

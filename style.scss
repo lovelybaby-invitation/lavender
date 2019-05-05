@@ -198,23 +198,27 @@ body {
   .arrow {
     position: absolute;
     display: flex;
-
     justify-content: center;
     align-items: center;
     font-weight: 1000;
     font-size: 5vw;
-    width: 6.4vw;
-    height: 6vw;
+    width: 8vw;
+    height: 8vw;
     top: 46vw;
     z-index: 1;
     color: #fff;
-    background-color: #888;
+    background-color: #7490c7;
+    background-clip: content-box;
+    opacity: 0.6;
     border-radius: 50%;
+    box-sizing: content-box;
+    padding: 4.5vw;
+    margin: -4.5vw;
     &.left {
-      left: 15px;
+      left: 5vw;
     }
     &.right {
-      right: 15px;
+      right: 5vw;
     }
   }
   .modal {
@@ -284,13 +288,12 @@ body {
   #map {
     width: calc(100vw - 20px);
     height: calc(100vw - 20px);
-    max-width: 60vh;
     max-height: 60vh;
   }
   .redirect-map {
     .header {
       font-size: 5vw;
-      margin: 5vw 0 3vw;
+      margin: 5vw 0 2vw;
     }
     .link {
       display: flex;
@@ -300,6 +303,10 @@ body {
         text-align: center;
         text-decoration: none;
         color: black;
+        img {
+          width: 40%;
+          filter: opacity(80%);
+        }
       }
     }
   }

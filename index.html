@@ -6,6 +6,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="청첩장: 오승현 & 조아라">
+  <meta property="og:description" content="Save the date">
+  <meta property="og:image" content="./assets/img/photo/thumb/001.jpg">
 
   <!--favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
@@ -14,7 +17,7 @@
   <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
   <!-- <title>애웅과 먼머의 청첩장</title> -->
-  <title>청첩장</title>
+  <!-- <title>청첩장</title> -->
 
   <!--fonts-->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet" />
@@ -132,13 +135,13 @@
       <!-- 갤러리 -->
       <div class="image-slider">
         <div class="images"></div>
-        <div class="arrow left">&leftarrow;</div>
-        <div class="arrow right">&rightarrow;</div>
+        <a class="arrow left">&lt;</a>
+        <a class="arrow right">&gt;</a>
       </div>
       <!-- 모달 -->
-      <div id="image-modal" class="modal">
+      <div id="modal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01" />
+        <img class="modal-content" id="modal-image" />
       </div>
     </div>
 
@@ -151,16 +154,33 @@
       <div id="map"></div>
 
       <div class="redirect-map">
-        <div class="header">지도앱 열기</div>
+        <div class="header">앱에서 열기</div>
         <div class="link">
-          <a target="_blank" href="navermaps://?menu=location&pinType=place&lat=37.48696198627081&lng=127.03344609502346&title=브라이드밸리">네이버지도</a>
-          <a target="_blank" href="http://map.daum.net/link/map/서울 강남구 강남대로 262 캠코양재타워,37.48696198627081,127.03344609502346">카카오맵</a>
-          <a target="_blank" href="http://m.tmap.co.kr/tmap2/mobile/route.jsp?name=%EC%84%9C%EC%9A%B8+%EA%B0%95%EB%82%A8%EA%B5%AC+%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C+262+%EC%BA%A0%EC%BD%94%EC%96%91%EC%9E%AC%ED%83%80%EC%9B%8C&lon=127.03344609502346&lat=37.48696198627081">T맵</a>
-          <a target="_blank" href="comgooglemaps://?q=브라이드밸리&center=37.48696198627081,127.03344609502346">구글맵</a>
+          <a target="_blank"
+            href="navermaps://?menu=location&pinType=place&lat=37.48696198627081&lng=127.03344609502346&title=브라이드밸리">
+            <img src="assets/img/map/naver.png" alt="">
+          </a>
+          <a target="_blank"
+            href="http://map.daum.net/link/map/서울 강남구 강남대로 262 캠코양재타워,37.48696198627081,127.03344609502346">
+            <img src="assets/img/map/kakao.png" alt="">
+          </a>
+          <a target="_blank"
+            href="http://m.tmap.co.kr/tmap2/mobile/route.jsp?name=%EC%84%9C%EC%9A%B8+%EA%B0%95%EB%82%A8%EA%B5%AC+%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C+262+%EC%BA%A0%EC%BD%94%EC%96%91%EC%9E%AC%ED%83%80%EC%9B%8C&lon=127.03344609502346&lat=37.48696198627081">
+            <img src="assets/img/map/tmap.png" alt="">
+          </a>
+          <a target="_blank" href="comgooglemaps://?q=브라이드밸리&center=37.48696198627081,127.03344609502346">
+            <img src="assets/img/map/google.png" alt="">
+          </a>
         </div>
       </div>
 
       <div class="location-desc">
+        <div>
+          <div class="header">
+            <span>주소</span>
+          </div>
+          <span class="desc">서울특별시 강남구 강남대로 262 캠코양재타워 지하1층</span>
+        </div>
         <div>
           <div class="header">
             <img class="icon" src="assets/img/bus.png" alt="" />

@@ -72,7 +72,7 @@ window.onload = function () {
     const imageWrapperEl = document.createElement("div");
     imageWrapperEl.className = "image-wrapper";
     const imageEl = document.createElement("img");
-    const src = `assets/img/photo/thumb/${imageFileName}`;
+    const src = `./assets/img/photo/thumb/${imageFileName}`;
     imageEl.src = src;
     imageEl.onclick = openImageModal;
     imageWrapperEl.appendChild(imageEl);

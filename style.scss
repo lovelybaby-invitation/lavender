@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "FlowerRoad";
-  src: url("assets/font/SangSangFlowerRoad.otf");
+  src: url("./assets/font/SangSangFlowerRoad.otf");
 }
 
 * {
@@ -76,7 +76,7 @@ body {
     width: 50%;
     height: 10vw;
     margin: 0 auto;
-    background-image: url("assets/img/divider.png");
+    background-image: url("./assets/img/divider.png");
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -87,7 +87,7 @@ body {
   flex-direction: column;
   .flower {
     height: calc(107vw - 20px);
-    background: no-repeat url("assets/img/frame.png");
+    background: no-repeat url("./assets/img/frame.png");
     background-size: contain;
     background-origin: border-box;
     padding: 24.13vw 0;
@@ -169,7 +169,7 @@ body {
         display: inline-block;
         width: 6vw;
         height: 6vw;
-        background-image: url(assets/img/phone.png);
+        background-image: url(./assets/img/phone.png);
         background-repeat: no-repeat;
         background-size: contain;
       }

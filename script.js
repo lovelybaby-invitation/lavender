@@ -88,12 +88,17 @@ window.onload = function () {
   function openImageModal(e) {
     modal.style.display = "flex";
     modalImg.src = e.target.src.replace('thumb', 'original');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImageModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = '';
   }
   // 모달 닫기
-  const closeButton = document.getElementsByClassName("close")[0];
-  closeButton.onclick = function () {
-    modal.style.display = "none";
-  };
+  const closeButton = document.querySelector('.close');
+  const dim = document.querySelector('.dim');
+  closeButton.onclick = closeImageModal;
+  dim.onclick = closeImageModal;
 
   // 이미지 스와이프 이벤트
   const hammer = new Hammer(imagesEl);
@@ -109,9 +114,13 @@ window.onload = function () {
   // 화살표 이벤트
   document.querySelector('.arrow.left').addEventListener('click', () => slide(-1));
   document.querySelector('.arrow.right').addEventListener('click', () => slide(1));
-
+  
+  let inAction = false;
   function slide(direction) {
+    if (inAction) return;
     imagesEl.scrollBy({ left: window.innerWidth * direction, behavior: 'smooth' });
+    inAction = true;
+    setTimeout(() => inAction = false, 600);
   }
 
   /**

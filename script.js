@@ -1,5 +1,6 @@
 window.onload = function () {
-  // pane
+  const navs = document.querySelectorAll("nav .nav-menu");
+  const progressBarEl = document.querySelector('.progress');
   const pane = {
     main: document.getElementById("main"),
     profile: document.getElementById("profile"),
@@ -7,9 +8,7 @@ window.onload = function () {
     location: document.getElementById("location")
   }
 
-  const progressBarEl = document.querySelector('.progress');
-
-  // nav에 클릭 이벤트 걸기
+  // nav에 클릭 이벤트
   const navMenuEl = document.querySelectorAll('.nav-menu');
   for (let i = 0; i < navMenuEl.length; i++) {
     const menuEl = navMenuEl[i];
@@ -18,7 +17,7 @@ window.onload = function () {
     }
   }
 
-  // 상단 메뉴 이모지 컨트롤
+  // 스크롤 이벤트에 따라 상단 메뉴 이모지 변경
   getTopFromEachElement();
   window.addEventListener("scroll", getTopFromEachElement);
   function getTopFromEachElement() {
@@ -43,7 +42,6 @@ window.onload = function () {
   }
 
   function turnOnEmoji(id) {
-    const navs = document.querySelectorAll(".nav .nav-menu");
     for (let i = 0; i < navs.length; i++) {
       const nav = navs[i];
       if (nav.id === `nav-${id}`) {

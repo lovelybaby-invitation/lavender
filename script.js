@@ -70,7 +70,7 @@ window.onload = function() {
     const imageWrapperEl = document.createElement("div");
     imageWrapperEl.className = "image-wrapper";
     const imageEl = document.createElement("img");
-    const src = `./assets/img/photo/thumb/${i}.jpg`;
+    const src = `./assets/img/photo/${i}.jpg`;
     imageEl.src = src;
     imageEl.onclick = openImageModal;
     imageWrapperEl.appendChild(imageEl);
@@ -92,7 +92,7 @@ window.onload = function() {
   // 모달 열기
   function openImageModal(e) {
     modal.style.display = "flex";
-    modalImg.src = e.target.src.replace("thumb", "original");
+    modalImg.src = e.target.src;
     document.body.style.overflow = "hidden";
   }
   function closeImageModal() {

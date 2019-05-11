@@ -1,6 +1,7 @@
 @font-face {
   font-family: "777Balsamtint";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -54,6 +55,9 @@ nav {
   .pane {
     position: relative;
     padding: 5vw 10px;
+    &:not(:first-child) {
+      padding: 15vw 10px;
+    }
     .anchor {
       position: absolute;
       margin-top: -20vw;
@@ -131,6 +135,7 @@ nav {
   .pictures {
     display: flex;
     margin-top: -3vw;
+    margin-bottom: 5vw;
     div {
       flex: 3;
       overflow: hidden;
@@ -148,23 +153,44 @@ nav {
         }
       }
       &.seunghyeon img {
-        transform: scale(1.7);
+        transform: scale(1.7) translateX(5vw) translateY(5vw);
         transform-origin: center;
-        clip-path: circle(20% at 50% 40%);
+        clip-path: circle(20% at 35% 35%);
       }
       &.ara img {
-        transform: scale(4) translateY(1.58vw);
+        transform: scale(1.7) translateX(-7vw) translateY(1.9vw);
         transform-origin: center;
-        clip-path: circle(13%);
+        clip-path: circle(20% at 70% 40%);
       }
     }
   }
 
+  .introduction {
+    display: flex;
+    justify-content: space-around;
+    font-size: 6vw;
+    font-family: "777Balsamtint";
+    .relationship {
+      display: flex;
+      align-items: center;
+      .parents {
+        display: inline-flex;
+        flex-direction: column;
+      }
+      .josa {
+        margin: 0 1.5vw;
+        font-size: 4.5vw;
+      }
+    }
+  }
+
+  // 사용되지 않음
   .contacts {
     display: flex;
     justify-content: space-around;
     font-size: 5.5vw;
     font-family: "777Balsamtint";
+
     .contact {
       display: flex;
       justify-content: space-between;
@@ -185,48 +211,22 @@ nav {
 
 .photo {
   .images {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto-fit;
+    grid-gap: 0;
+    grid-column-gap: 1vw;
     overflow: hidden;
     .image-wrapper {
-      min-width: 100vw;
-      max-width: 100vw;
-      height: 60vw;
-      padding: 0 10px;
+      &.width {
+        grid-column: 1 / 3;
+      }
       img {
         width: 100%;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        height: auto;
       }
     }
   }
-  .arrow {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 1000;
-    font-size: 5vw;
-    width: 8vw;
-    height: 8vw;
-    top: 46vw;
-    z-index: 1;
-    color: #fff;
-    background-color: #7490c7;
-    background-clip: content-box;
-    opacity: 0.2;
-    border-radius: 50%;
-    box-sizing: content-box;
-    padding: 4.5vw;
-    margin: -4.5vw;
-    &.left {
-      left: 5vw;
-    }
-    &.right {
-      right: 5vw;
-    }
-  }
+
   .modal {
     display: none;
     align-items: center;
@@ -257,7 +257,7 @@ nav {
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.9);
+      background-color: rgba(0, 0, 0, 0.9);
     }
   }
 }

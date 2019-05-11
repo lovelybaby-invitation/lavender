@@ -1,20 +1,20 @@
-window.onload = function () {
+window.onload = function() {
   const navs = document.querySelectorAll("nav .nav-menu");
-  const progressBarEl = document.querySelector('.progress');
+  const progressBarEl = document.querySelector(".progress");
   const pane = {
     main: document.getElementById("main"),
     profile: document.getElementById("profile"),
     photo: document.getElementById("photo"),
     location: document.getElementById("location")
-  }
+  };
 
   // nav에 클릭 이벤트
-  const navMenuEl = document.querySelectorAll('.nav-menu');
+  const navMenuEl = document.querySelectorAll(".nav-menu");
   for (let i = 0; i < navMenuEl.length; i++) {
     const menuEl = navMenuEl[i];
     menuEl.onclick = () => {
-      pane[menuEl.id.slice(4)].scrollIntoView({ behavior: 'smooth' });
-    }
+      pane[menuEl.id.slice(4)].scrollIntoView({ behavior: "smooth" });
+    };
   }
 
   // 스크롤 이벤트에 따라 상단 메뉴 이모지 변경
@@ -29,16 +29,26 @@ window.onload = function () {
     const minimum = Math.min(mainTop, profileTop, photoTop, locationTop);
 
     switch (minimum) {
-      case mainTop: turnOnEmoji("main"); break;
-      case profileTop: turnOnEmoji("profile"); break;
-      case photoTop: turnOnEmoji("photo"); break;
-      case locationTop: turnOnEmoji("location"); break;
+      case mainTop:
+        turnOnEmoji("main");
+        break;
+      case profileTop:
+        turnOnEmoji("profile");
+        break;
+      case photoTop:
+        turnOnEmoji("photo");
+        break;
+      case locationTop:
+        turnOnEmoji("location");
+        break;
     }
 
     const scrollHeight = document.documentElement.scrollHeight;
     const windowHeight = document.documentElement.clientHeight;
-    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    progressBarEl.style.width = `${scrollTop / (scrollHeight - windowHeight) * 100}%`;
+    const scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    progressBarEl.style.width = `${(scrollTop / (scrollHeight - windowHeight)) *
+      100}%`;
   }
 
   function turnOnEmoji(id) {
@@ -55,27 +65,24 @@ window.onload = function () {
   /**
    * 이미지
    */
-  const images = [
-    "001.jpg",
-    "002.jpg",
-    "003.jpg",
-    "004.jpg",
-    "005.jpg",
-    "006.jpg"
-  ];
-
-  // 이미지 추가
   const imagesEl = document.querySelector(".images");
-  images.forEach(imageFileName => {
+  for (let i = 0; i < 26; i++) {
     const imageWrapperEl = document.createElement("div");
     imageWrapperEl.className = "image-wrapper";
     const imageEl = document.createElement("img");
-    const src = `./assets/img/photo/thumb/${imageFileName}`;
+    const src = `./assets/img/photo/thumb/${i}.jpg`;
     imageEl.src = src;
     imageEl.onclick = openImageModal;
     imageWrapperEl.appendChild(imageEl);
     imagesEl.appendChild(imageWrapperEl);
-  });
+    imageEl.onload = function() {
+      const width = this.width;
+      const height = this.height;
+      if (width > height) {
+        this.parentElement.classList.add('width');
+      }
+    };
+  }
 
   /**
    * 이미지 모달
@@ -85,60 +92,31 @@ window.onload = function () {
   // 모달 열기
   function openImageModal(e) {
     modal.style.display = "flex";
-    modalImg.src = e.target.src.replace('thumb', 'original');
-    document.body.style.overflow = 'hidden';
+    modalImg.src = e.target.src.replace("thumb", "original");
+    document.body.style.overflow = "hidden";
   }
   function closeImageModal() {
     modal.style.display = "none";
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   }
   // 모달 닫기
-  const closeButton = document.querySelector('.close');
-  const dim = document.querySelector('.dim');
+  const closeButton = document.querySelector(".close");
+  const dim = document.querySelector(".dim");
   closeButton.onclick = closeImageModal;
   dim.onclick = closeImageModal;
-
-  // 이미지 스와이프 이벤트
-  const hammer = new Hammer(imagesEl);
-  hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL })
-  hammer.on('swipeleft swiperight', (ev) => {
-    let direction = 1;
-    switch (ev.type) {
-      case 'swiperight': direction = -1; break;
-    }
-    slide(direction);
-  });
-
-  // 화살표 이벤트
-  document.querySelector('.arrow.left').addEventListener('click', () => slide(-1));
-  document.querySelector('.arrow.right').addEventListener('click', () => slide(1));
-  
-  let inAction = false;
-  function slide(direction) {
-    if (inAction) return;
-    imagesEl.scrollBy({ left: window.innerWidth * direction, behavior: 'smooth' });
-    inAction = true;
-    setTimeout(() => inAction = false, 600);
-  }
 
   /**
    * 지도
    */
-  const map = new daum.maps.Map(
-    document.getElementById("map"),
-    {
-      center: new daum.maps.LatLng(37.48696198627081, 127.03344609502346),
-      level: 4 //지도의 레벨(확대, 축소 정도)
-    }
-  );
+  const map = new daum.maps.Map(document.getElementById("map"), {
+    center: new daum.maps.LatLng(37.48696198627081, 127.03344609502346),
+    level: 4 //지도의 레벨(확대, 축소 정도)
+  });
   map.setZoomable(false);
   map.setDraggable(false);
 
   new daum.maps.Marker({
-    position: new daum.maps.LatLng(
-      37.48696198627081,
-      127.03344609502346
-    ),
+    position: new daum.maps.LatLng(37.48696198627081, 127.03344609502346),
     image: new daum.maps.MarkerImage(
       "./assets/img/marker.png",
       new daum.maps.Size(64, 69),

@@ -66,7 +66,7 @@ window.onload = function() {
    * 이미지
    */
   const imagesEl = document.querySelector(".images");
-  for (let i = 0; i < 26; i++) {
+  for (let i = 0; i < 17; i++) {
     const imageWrapperEl = document.createElement("div");
     imageWrapperEl.className = "image-wrapper";
     const imageEl = document.createElement("img");

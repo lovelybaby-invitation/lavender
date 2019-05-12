@@ -56,7 +56,7 @@ nav {
     position: relative;
     padding: 5vw 10px;
     &:not(:first-child) {
-      padding: 12vw 10px;
+      padding: 7vw 10px;
     }
     .anchor {
       position: absolute;
@@ -126,6 +126,13 @@ nav {
 .profile {
   display: flex;
   flex-direction: column;
+
+  .invitation {
+    text-align: center;
+    font-family: "777Balsamtint";
+    font-size: 5vw;
+    margin: 7vw 0 11vw;
+  }
 
   .pictures {
     display: flex;
@@ -299,6 +306,11 @@ nav {
     }
     .desc {
       font-size: 3.5vw;
+    }
+    .bus {
+      font-size: 3vw;
+      flex-direction: column;
+      margin: 1vw;
     }
   }
 }

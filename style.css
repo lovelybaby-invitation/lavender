@@ -140,7 +140,7 @@ nav .progress {
 }
 
 .main .flower .names .name {
-  font-size: 13vw;
+  font-size: 11vw;
 }
 
 .main .flower .names .em {
@@ -176,131 +176,7 @@ nav .progress {
   text-align: center;
   font-family: "777Balsamtint";
   font-size: 5vw;
-  margin: 7vw 0 11vw;
-}
-
-.profile .pictures {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -3vw;
-  margin-bottom: 5vw;
-}
-
-.profile .pictures div {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  overflow: hidden;
-  height: calc(43vw - 6.6px);
-}
-
-.profile .pictures div img {
-  width: 100%;
-}
-
-.profile .pictures div.ring {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.profile .pictures div.ring img {
-  width: 100%;
-}
-
-.profile .pictures div.seunghyeon img {
-  -webkit-transform: scale(1.7) translateX(5vw) translateY(5vw);
-          transform: scale(1.7) translateX(5vw) translateY(5vw);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-clip-path: circle(20% at 35% 35%);
-          clip-path: circle(20% at 35% 35%);
-}
-
-.profile .pictures div.ara img {
-  -webkit-transform: scale(1.7) translateX(-7vw) translateY(1.9vw);
-          transform: scale(1.7) translateX(-7vw) translateY(1.9vw);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-clip-path: circle(20% at 70% 40%);
-          clip-path: circle(20% at 70% 40%);
-}
-
-.profile .introduction {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 6vw;
-  font-family: "777Balsamtint";
-}
-
-.profile .introduction .relationship {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.profile .introduction .relationship .parents {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.profile .introduction .relationship .josa {
-  margin: 0 1.5vw;
-  font-size: 4.5vw;
-}
-
-.profile .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 5.5vw;
-  font-family: "777Balsamtint";
-}
-
-.profile .contacts .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 39vw;
-  height: 8vw;
-}
-
-.profile .contacts .contact .tel {
-  display: inline-block;
-  width: 6vw;
-  height: 6vw;
-  background-image: url(./assets/img/phone.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  margin: 1vw 0 4vw;
 }
 
 .photo .images {
@@ -376,7 +252,7 @@ nav .progress {
 }
 
 .location #map {
-  width: calc(100vw - 20px);
+  width: calc(100vw - 40px);
   height: calc(100vw - 20px);
   max-height: 60vh;
 }

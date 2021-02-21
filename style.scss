@@ -106,7 +106,7 @@ nav {
       align-items: center;
       height: 100%;
       .name {
-        font-size: 13vw;
+        font-size: 11vw;
       }
       .em {
         font-size: 9vw;
@@ -131,83 +131,7 @@ nav {
     text-align: center;
     font-family: "777Balsamtint";
     font-size: 5vw;
-    margin: 7vw 0 11vw;
-  }
-
-  .pictures {
-    display: flex;
-    margin-top: -3vw;
-    margin-bottom: 5vw;
-    div {
-      flex: 3;
-      overflow: hidden;
-      height: calc(43vw - 6.6px);
-      img {
-        width: 100%;
-      }
-      &.ring {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 100%;
-        }
-      }
-      &.seunghyeon img {
-        transform: scale(1.7) translateX(5vw) translateY(5vw);
-        transform-origin: center;
-        clip-path: circle(20% at 35% 35%);
-      }
-      &.ara img {
-        transform: scale(1.7) translateX(-7vw) translateY(1.9vw);
-        transform-origin: center;
-        clip-path: circle(20% at 70% 40%);
-      }
-    }
-  }
-
-  .introduction {
-    display: flex;
-    justify-content: space-around;
-    font-size: 6vw;
-    font-family: "777Balsamtint";
-    .relationship {
-      display: flex;
-      align-items: center;
-      .parents {
-        display: inline-flex;
-        flex-direction: column;
-      }
-      .josa {
-        margin: 0 1.5vw;
-        font-size: 4.5vw;
-      }
-    }
-  }
-
-  // 사용되지 않음
-  .contacts {
-    display: flex;
-    justify-content: space-around;
-    font-size: 5.5vw;
-    font-family: "777Balsamtint";
-
-    .contact {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 39vw;
-      height: 8vw;
-      .tel {
-        display: inline-block;
-        width: 6vw;
-        height: 6vw;
-        background-image: url(./assets/img/phone.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-    }
+    margin: 1vw 0 4vw;
   }
 }
 
@@ -268,7 +192,7 @@ nav {
   flex-direction: column;
   font-size: 4vw;
   #map {
-    width: calc(100vw - 20px);
+    width: calc(100vw - 40px);
     height: calc(100vw - 20px);
     max-height: 60vh;
   }
